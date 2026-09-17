@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="《佛經集合》Android APK 下載">
+<title>佛經集合 Android 下載</title>
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --paper: #f7ecd2;
+    --paper-deep: #ecd9ae;
+    --ink: #2b1d10;
+    --ink-soft: #6f5530;
+    --gold: #b9893a;
+    --red: #8d241a;
+    --card: #fffaf0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    background: linear-gradient(170deg, #fcf5e3, var(--paper) 55%, var(--paper-deep));
+    color: var(--ink);
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+  main {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 40px 16px calc(32px + env(safe-area-inset-bottom));
+    text-align: center;
+  }
+  .icon {
+    width: 104px; height: 104px;
+    border-radius: 24px;
+    border: 3px solid #c29445;
+    box-shadow: 0 6px 18px rgba(91, 55, 9, .28);
+  }
+  h1 {
+    margin: 18px 0 2px;
+    font-size: 34px;
+    letter-spacing: .08em;
+    color: var(--red);
+  }
+  .sub { margin: 0; color: var(--ink-soft); font-size: 16px; }
+  .card {
+    margin-top: 26px;
+    padding: 22px 18px;
+    background: var(--card);
+    border: 2px solid #d8b878;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(120, 84, 26, .12);
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 12px;
+    border: 0;
+    border-radius: 14px;
+    font: inherit;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .btn-main {
+    color: #fff8e6;
+    background: linear-gradient(180deg, #a8712c, #7c4a17);
+    box-shadow: 0 3px 0 #5f3214;
+  }
+  .btn-main:active { transform: translateY(2px); box-shadow: 0 1px 0 #5f3214; }
+  .btn-line {
+    margin-top: 12px;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 2px solid #d0ad6a;
+    font-size: 16px;
+  }
+  .meta { margin: 12px 0 0; font-size: 13px; color: #8a6d45; min-height: 1.6em; }
+  .notes { margin-top: 22px; text-align: left; font-size: 15px; color: #4a3820; }
+  .notes h2 { margin: 0 0 6px; font-size: 16px; color: var(--red); }
+  .notes ol, .notes ul { margin: 0 0 14px; padding-left: 1.3em; }
+  .notes a { color: #7c4a17; }
+  .hash { word-break: break-all; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; }
+  .toast { margin: 10px 0 0; font-size: 14px; color: #2e7d32; min-height: 1.4em; }
+
+  /* 微信／QQ 內置瀏覽器唔准直接下載 APK：顯示「用瀏覽器開啟」指引 */
+  .inapp { display: none; }
+  body.is-inapp .inapp { display: block; }
+  body.is-inapp .outside-only { display: none; }
+  .inapp-banner {
+    position: sticky; top: 0; z-index: 5;
+    padding: 14px 64px 14px 16px;
+    background: #2b1d10;
+    color: #fff3d6;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .inapp-banner b { color: #f1d08c; }
+  .inapp-arrow {
+    position: absolute; top: 6px; right: 14px;
+    font-size: 34px; line-height: 1;
+    color: #f1d08c;
+    animation: nudge 1.2s ease-in-out infinite;
+  }
+  @keyframes nudge { 50% { transform: translate(3px, -4px); } }
+  @media (prefers-reduced-motion: reduce) { .inapp-arrow { animation: none; } }
+  .steps { margin-top: 18px; text-align: left; font-size: 16px; }
+  .steps li { margin-bottom: 6px; }
+  .dots {
+    display: inline-block; padding: 0 6px; border-radius: 6px;
+    background: #efe2c4; font-weight: 700; letter-spacing: .1em;
+  }
+</style>
+</head>
+<body>
+<div class="inapp inapp-banner" role="alert">
+  <span class="inapp-arrow" aria-hidden="true">↗</span>
+  微信／QQ 內不能直接下載 App。<br>
+  請按右上角 <b>···</b>，選擇 <b>「在瀏覽器打開」</b>。
+</div>
+
+<main>
+  <img class="icon" src="icon.png" alt="佛經集合 App 圖示" width="104" height="104">
+  <h1>佛經集合</h1>
+  <p class="sub">佛經閱讀 App · Android 安裝檔</p>
+
+  <section class="card">
+    <div class="outside-only">
+      <a class="btn btn-main" id="download"
+         href="https://github.com/kctst/BuddhistScriptures/releases/latest/download/BuddhistScriptures.apk"
+         download>下載 Android APK</a>
+      <p class="meta" id="meta"></p>
+    </div>
+
+    <div class="inapp">
+      <ol class="steps">
+        <li>按畫面右上角 <span class="dots">···</span></li>
+        <li>選擇「在瀏覽器打開」</li>
+        <li>在瀏覽器按「下載 Android APK」</li>
+      </ol>
+    </div>
+
+    <button class="btn btn-line" id="copy" type="button">複製下載網址</button>
+    <p class="toast" id="toast" aria-live="polite"></p>
+  </section>
+
+  <section class="notes">
+    <h2>可以使用 Google Play 的裝置</h2>
+    <ul>
+      <li>建議優先經 <a href="https://play.google.com/store/apps/details?id=com.jingge.app">Google Play</a> 安裝，日後可自動更新。</li>
+    </ul>
+
+    <h2>安裝步驟</h2>
+    <ol>
+      <li>下載完成後，打開 <b>BuddhistScriptures.apk</b>。</li>
+      <li>如手機提示「未知來源」，請按指示允許本次安裝。</li>
+      <li>安裝完成後即可離線閱讀。</li>
+    </ol>
+
+    <h2>檔案校驗</h2>
+    <ul>
+      <li><a id="sha-link" href="https://github.com/kctst/BuddhistScriptures/releases/latest/download/SHA256.txt">SHA-256 校驗碼</a></li>
+      <li><a href="https://github.com/kctst/BuddhistScriptures/releases">所有版本</a></li>
+    </ul>
+  </section>
+</main>
+
+<script>
+(function () {
+  var APK_URL = 'https://github.com/kctst/BuddhistScriptures/releases/latest/download/BuddhistScriptures.apk';
+  var ua = navigator.userAgent || '';
+  // 微信、企業微信、QQ 內置瀏覽器都會攔截 APK 下載
+  var inApp = /MicroMessenger|WxWork|\bQQ\/|MQQBrowser.*QBWebViewType/i.test(ua);
+  if (inApp) document.body.classList.add('is-inapp');
+
+  var toast = document.getElementById('toast');
+  document.getElementById('copy').addEventListener('click', function () {
+    function done(ok) {
+      toast.textContent = ok ? '已複製，請貼到瀏覽器網址列打開。' : '未能自動複製，請長按以下網址：' + APK_URL;
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(APK_URL).then(function () { done(true); }, function () { done(fallback()); });
+    } else {
+      done(fallback());
+    }
+    function fallback() {
+      try {
+        var t = document.createElement('textarea');
+        t.value = APK_URL; t.setAttribute('readonly', '');
+        t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(t);
+        return ok;
+      } catch (e) { return false; }
+    }
+  });
+
+  // 顯示最新版本資料；失敗就留空，唔影響下載掣
+  if (!inApp && window.fetch) {
+    fetch('https://api.github.com/repos/kctst/BuddhistScriptures/releases/latest')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rel) {
+        if (!rel) return;
+        var asset = (rel.assets || []).filter(function (a) { return a.name === 'BuddhistScriptures.apk'; })[0];
+        var m = /^v?([\d.]+)/.exec(rel.tag_name || '');
+        var parts = [];
+        if (m) parts.push('最新版本 ' + m[1]);
+        if (asset) parts.push((asset.size / 1048576).toFixed(1) + ' MB');
+        if (rel.published_at) parts.push(rel.published_at.slice(0, 10));
+        document.getElementById('meta').textContent = parts.join(' · ');
+      })
+      .catch(function () {});
+  }
+})();
+</script>
+</body>
+</html>
