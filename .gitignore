@@ -2,3 +2,4 @@ release-staging/
 verify/
 qr/
 *.apk
+!/BuddhistScriptures.apk
