@@ -28,4 +28,4 @@ https://github.com/kctst/BuddhistScriptures/releases/latest/download/BuddhistScr
 
 APK 64,959,008 bytes，SHA-256 `FB020CAA4C501A31EE05405146C4F016F177AA4A84DFB3BFB07A6F42B6267465`。applicationId `com.jingge.app`／1.4.1／50，既有正式upload signer，apksigner v2/v3及zipalign PASS。
 
-AAB只供Google Play，不作側載下載。code50 APK公開不等於remote policy已升50：policy目前維持sideload49/0、Play22/0、Huawei22/0，之後由Owner確認各渠道實際可下載後才逐個提高。
+AAB只供Google Play，不作側載下載。sideload remote policy 已升為 50/0（Owner 2026-10-08 要求，令 code49 及更舊側載版本收到更新提示）；Play22/0、Huawei22/0 維持不變，各商店渠道由Owner確認實際可下載後才逐個提高；所有 minimum 仍為 0。
