@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "packageName": "com.jingge.app",
-  "updatedAt": "2026-10-08T08:41:21.493Z",
+  "updatedAt": "2026-10-08T09:06:34.768Z",
   "channels": {
     "googlePlay": {
-      "latestVersionCode": 22,
+      "latestVersionCode": 51,
       "minimumSupportedVersionCode": 0
     },
     "huawei": {
