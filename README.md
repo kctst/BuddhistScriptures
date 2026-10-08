@@ -20,6 +20,7 @@ https://github.com/kctst/BuddhistScriptures/releases/latest/download/BuddhistScr
 1. GitHub Releases：建立新 Release（非 Draft、非 Prerelease、設為 Latest），上傳正式名稱 APK、byte-identical `BuddhistScriptures.apk` 及 `SHA256.txt`。舊 Release 永久保留。
 2. 只更新本頁／README metadata及下載連結，commit 後 push；APK/AAB不再commit。本頁fallback用既有Release latest相容redirect，既有API resolver成功後選正式帶code的APK asset（不選AAB）。
 3. 同一次工作更新 `update-policy.json`（永久規則）：只將 `channels.sideload.latestVersionCode` 改成該版 code，`minimumSupportedVersionCode` 維持 0（強制更新須另行明確批准）；`googlePlay`／`huawei` 不因 GitHub 發布而改。Release 公開並驗證下載後先改，push 後等 Pages built，再讀返 https://kctst.github.io/BuddhistScriptures/update-policy.json 核對與本機一致。App 靠此檔得知有新版，漏做會令舊版側載用戶收唔到更新提示。本 repo 冇設 git 身份：commit 用 `git -c user.name=<AI 名> -c user.email=<noreply 地址>`，唔好冒用其他 AI 身份。
+4. Google Play 新版 production `completed` 且 100% 推出後，同樣要升 `googlePlay.latestVersionCode`（永久規則，唔使再問）：喺 app repo 跑 `node tools/update_policy.mjs --sync-play --publish`（Play API 核實；只升 googlePlay，minimum 維持 0；HANDOVER.md 有 `PLAY-POLICY-HOLD` 煞車時唔會升；Huawei 要擁有人確認先改）。
 
 根目錄舊 `BuddhistScriptures.apk` 保留為code46歷史相容檔，不改bytes或URL；下載新版請用上述永久首頁或Release latest連結。永久首頁／QR策略不變。
 
