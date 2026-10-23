@@ -2,7 +2,7 @@
 
 此 repository 僅用作《善恩佛經》Android APK 公開下載，不包含 App source。
 
-目前正式側載版本：**v1.4.1 / code50**，package `com.jingge.app`。
+目前正式側載版本：**v1.4.1 / code69**，package `com.jingge.app`。
 
 正式 Google Play 用戶建議優先透過 Google Play 安裝及更新。
 
@@ -26,8 +26,8 @@ https://github.com/kctst/BuddhistScriptures/releases/latest/download/BuddhistScr
 
 兩邊 SHA-256 必須一致。下載頁及 App 內 QR Code 網址不用更改。
 
-## code50 驗證
+## code69 驗證
 
-APK 64,959,008 bytes，SHA-256 `FB020CAA4C501A31EE05405146C4F016F177AA4A84DFB3BFB07A6F42B6267465`。applicationId `com.jingge.app`／1.4.1／50，既有正式upload signer，apksigner v2/v3及zipalign PASS。
+APK 64,996,781 bytes，SHA-256 `DD19E1F8F0E6F52AA3AF21F958DC8B2EFD601F02102573DCB1BA527C52E545CD`。applicationId `com.jingge.app`／1.4.1／69，既有正式upload signer，apksigner v2/v3及zipalign PASS。
 
-AAB只供Google Play，不作側載下載。sideload remote policy 已升為 50/0（Owner 2026-10-08 要求，令 code49 及更舊側載版本收到更新提示）；Play22/0、Huawei22/0 維持不變，各商店渠道由Owner確認實際可下載後才逐個提高；所有 minimum 仍為 0。
+AAB只供Google Play，不作側載下載。sideload remote policy 已升為 69/0（Owner 2026-10-08 永久規則：每次 GitHub 側載發版同次升 policy，令舊版側載用戶收到更新提示）；Play51/0、Huawei22/0 維持不變，各商店渠道由Owner確認實際可下載後才逐個提高；所有 minimum 仍為 0。
