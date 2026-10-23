@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageName": "com.jingge.app",
-  "updatedAt": "2026-10-08T09:06:34.768Z",
+  "updatedAt": "2026-10-23T15:25:05.000Z",
   "channels": {
     "googlePlay": {
       "latestVersionCode": 51,
@@ -12,7 +12,7 @@
       "minimumSupportedVersionCode": 0
     },
     "sideload": {
-      "latestVersionCode": 50,
+      "latestVersionCode": 69,
       "minimumSupportedVersionCode": 0
     }
   }
