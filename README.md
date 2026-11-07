@@ -4,6 +4,8 @@
 
 目前正式側載版本：**v1.4.1 / code78**，package `com.jingge.app`。
 
+發布日期：2026-11-08。
+
 正式 Google Play 用戶建議優先透過 Google Play 安裝及更新。
 
 其他 Android 裝置可透過下載頁或 GitHub Releases 下載 APK：
